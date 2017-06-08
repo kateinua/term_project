@@ -1,6 +1,6 @@
 
-from catalog.arrays import DynamicArray
-from catalog.platform_element import Platform_element
+from arrays import DynamicArray
+from platform_element import Platform_element
 class Job():
     def __init__(self ):
 

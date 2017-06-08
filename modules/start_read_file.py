@@ -1,7 +1,7 @@
 #from catalog.arrays import DynamicArray
-from catalog.apartment import Apartment
-from catalog.jobs import Job
-from catalog.cars import Car
+from apartment import Apartment
+from jobs import Job
+from cars import Car
 
 sites_taken = {'delaware': ['delaware'],'maine':['maine'],'montana':['montana'],'newyork':['newyork'], 'vermont':['vermont'],
          'wyoming':['wyoming'], 'california': ['losangeles', 'sandiego'], 'illinois':['chicago'], 'texas': ['houston',
@@ -90,8 +90,8 @@ with open('result.txt', 'w') as t:
         for el in sites[state]:
             print(el)
             data_for_one(apartments1, state, ('data/DATA_by_date_'+ el + '.txt'))
-            #data_for_one(job1, state, 'data/DATA_by_jobs_' + el +'.txt')
-            #data_for_one(car1, state, 'data/DATA_by_cars_' + el +'.txt')
+            data_for_one(job1, state, 'data/DATA_by_jobs_' + el +'.txt')
+            data_for_one(car1, state, 'data/DATA_by_cars_' + el +'.txt')
         t.write('number of apartment advertisments = ' + str(apartments1.number(state))+ '\n')
         #print('number ')
         #print(apartments1.price_for_state('miami'))
@@ -111,26 +111,34 @@ with open('result.txt', 'w') as t:
         k = apartments1.mapped(state,True)
         t.write('number of elements, which have a map = '+str(k[0])+' ' +str(k[1])+ '%\n')
         t.write(' *' * 20 + '\n')
-        '''
-        k = job1.number(state)
-        t.write('number of jobs advertisments = ', k)
-        t.write('* ' * 20 + '\n')
-        t.write('number of cars advertisments = ' + str(car1.number(state))+ '\n')
-
-        t.write('average price = ' + str(car1.average_price(state))+ '\n')
-        t.write('middle price = ' + str(car1.middle_price(state)) + '\n')
-        t.write('average length of advertisment = ' + str(car1.average_len_advert(state)) + '\n')
         try:
-            k = car1.most_popular_place(state, True)
-            t.write('the most popular place = ' + str(k[0])+' ' +str(k[1])+ '%\n')
-        except UnicodeEncodeError:
-            t.write("the most popular place is secret, "+ str(k[1]) + '%\n')
-        k = car1.geotaged(state, True)
-        t.write('number geotagged = ' + str(k[0])+' ' +str(k[1])+ '%\n')
-        k = car1.pictured(state, True)
-        t.write('number of elements, which have a picture = ' + str(k[0])+' ' +str(k[1])+ '%\n')
-        k = car1.mapped(state,True)
-        t.write('number of elements, which have a map = '+str(k[0])+' ' +str(k[1])+ '%\n')
-        '''
+            k = job1.number(state)
+            t.write('number of jobs advertisments = '+ str(k)+ '\n')
+        except:
+            print(k)
+            pass
+        try:
+            t.write('* ' * 20 + '\n')
+            t.write('number of cars advertisments = ' + str(car1.number(state))+ '\n')
+
+            t.write('average price = ' + str(car1.average_price(state))+ '\n')
+            t.write('middle price = ' + str(car1.middle_price(state)) + '\n')
+            t.write('average length of advertisment = ' + str(car1.average_len_advert(state)) + '\n')
+
+            try:
+                k = car1.most_popular_place(state, True)
+                t.write('the most popular place = ' + str(k[0])+' ' +str(k[1])+ '%\n')
+            except UnicodeEncodeError:
+                t.write("the most popular place is secret, "+ str(k[1]) + '%\n')
+            k = car1.geotaged(state, True)
+            t.write('number geotagged = ' + str(k[0])+' ' +str(k[1])+ '%\n')
+            k = car1.pictured(state, True)
+            t.write('number of elements, which have a picture = ' + str(k[0])+' ' +str(k[1])+ '%\n')
+            k = car1.mapped(state,True)
+            t.write('number of elements, which have a map = '+str(k[0])+' ' +str(k[1])+ '%\n')
+        except:
+            #print(k)
+            pass
+
         t.write('*' * 40 + '\n\n')
         print('proceeded data for ', state)

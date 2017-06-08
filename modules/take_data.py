@@ -16,13 +16,14 @@ new_sites = ['tucson', 'fresno', 'sacramento',   'atlanta',
              'irvine', 'chesapeake', 'irving', 'scottsdale', 'northlasvegas', 'fremont', 'gilberttown', 'sanbernardino',
              'boise', 'birmingham'
 '''
+new_sites += taken_sites
 # b =0 take data for houses, b = 1 take data for jobs, b = 2 take data for cars
-b = 1
+b = 2
 if b ==0:
     for name in new_sites:
         try:
 
-            with open("term_project/catalog/data/DATA_by_date_"+name+".txt", 'w', encoding='utf-8') as d:
+            with open("data/DATA_by_date_"+name+".txt", 'w', encoding='utf-8') as d:
                 cl_h = CraigslistHousing(site=name)
 
                 #m = 0
@@ -44,7 +45,7 @@ elif b == 1:
     for name in new_sites:
         try:
 
-            with open("term_project/catalog/data/DATA_by_jobs_" + name + ".txt", 'w', encoding='utf-8') as d:
+            with open("data/DATA_by_jobs_" + name + ".txt", 'w', encoding='utf-8') as d:
                 cl_j = CraigslistJobs(site=name)
 
                 # m = 0
@@ -66,7 +67,7 @@ elif b == 2:
     for name in new_sites:
         try:
 
-            with open("term_project/catalog/data/DATA_by_cars_" + name + ".txt", 'w', encoding='utf-8') as d:
+            with open("data/DATA_by_cars_" + name + ".txt", 'w', encoding='utf-8') as d:
                 cl_fs = CraigslistForSale(site=name)
 
                 # m = 0

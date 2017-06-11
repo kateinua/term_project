@@ -6,74 +6,80 @@
 -->
 <html>
 	<head>
-		<title>StateSeeker</title>    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<title>StateSeeker</title>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<link rel="shortcut icon" href="images/pic01.jpg">
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<script type="text/javascript">
             google.charts.load('current', {'packages':['geochart']});
             google.charts.setOnLoadCallback(drawRegionsMap);
+
             function drawRegionsMap() {
                 var data = google.visualization.arrayToDataTable([
                     ['State', 'Name', 'average price', 'middle price'],
-                    ['US-AL', 'Alabama', 0, 0],
-                    ['US-AR', 'Arkansas', 0, 0],
-                    ['US-AZ', 'Arizona', 244679, 190000],
-                    ['US-CA', 'California', 415267, 1775],
-                    ['US-CO', 'Colorado', 57330, 1520],
-                    ['US-CT', 'Connecticut', 0, 0],
-                    ['US-DC', 'Columbia', 0, 0],
-                    ['US-DE', 'Delaware', 64719, 1104],
-                    ['US-FL', 'Florida', 24856, 890],
-                    ['US-GA', 'Georgia', 0, 0],
-                    ['US-HI', 'Hawaii', 0, 0],
-                    ['US-ID', 'Idaho', 0, 0],
-                    ['US-IL', 'Illinois', 42977, 1852],
-                    ['US-IN', 'Indiana', 20697, 749],
-                    ['US-IA', 'Iowa', 0, 0],
-                    ['US-KS', 'Kansas', 0, 0],
-                    ['US-KY', 'Kentucky', 0, 0],
-                    ['US-AK', 'Alaska', 0, 0],
-                    ['US-LA', 'Louisiana', 0, 0],
-                    ['US-ME', 'Maine', 40496, 1300],
-                    ['US-MD', 'Maryland', 0, 0],
-                    ['US-MA', 'Massachusetts', 16080, 2656],
-                    ['US-MI', 'Michigan', 47490, 950],
-                    ['US-MN', 'Minnesota', 0, 0],
-                    ['US-MS', 'Mississippi', 0, 0],
-                    ['US-MO', 'Missouri', 0, 0],
-                    ['US-MT', 'Montana', 88001, 1000],
-                    ['US-NE', 'Nebraska', 0, 0],
-                    ['US-NV', 'Nevada', 0, 0],
-                    ['US-NH', 'New Hampshire', 0, 0],
-                    ['US-NJ', 'New Jersey', 0, 0],
-                    ['US-NM', 'New Mexico', 0, 0],
-                    ['US-NY', 'New York', 374442, 2450],
-                    ['US-NC', 'North Carolina', 30441, 1100],
-                    ['US-ND', 'North Dakota', 0, 0],
-                    ['US-OH', 'Ohio', 14405, 890],
-                    ['US-OK', 'Oklahoma', 0, 0],
-                    ['US-OR', 'Oregon', 0, 0],
-                    ['US-PA', 'Pennsylvania', 68358, 1395],
-                    ['US-RI', 'Rhode Island', 0, 0],
-                    ['US-SC', 'South Carolina', 0, 0],
-                    ['US-SD', 'South Dakota', 0, 0],
-                    ['US-TN', 'Tennessee', 15270, 840],
-                    ['US-TX', 'Texas', 35697, 1099],
-                    ['US-UT', 'Utah', 0, 0],
-                    ['US-VT', 'Vermont', 62738, 1250],
-                    ['US-VA', 'Virginia', 0, 0],
-                    ['US-WA', 'Washington', 20883, 1694],
-                    ['US-WV', 'West Virginia', 0, 0],
-                    ['US-WI', 'Wisconsin', 0, 0],
-                    ['US-WY', 'Wyoming', 106220, 1295],
-                    ['US-DC', 'District of Columbia', 0, 0]
+                    ['US-AL', 'Alabama', 1575, 1120],
+                    ['US-AR', 'Arkansas', 2122, 900],
+                    ['US-AZ', 'Arizona', 16905, 1900],
+                    ['US-CA', 'California', 33020, 1775],
+                    ['US-CO', 'Colorado', 5028, 1520],
+                    ['US-CT', 'Connecticut', 1123, 890],
+                    ['US-DC', 'Columbia', 7900, 1000],
+                    ['US-DE', 'Delaware', 8916, 1104],
+                    ['US-FL', 'Florida', 1004, 890],
+                    ['US-GA', 'Georgia', 1599, 1080],
+                    ['US-HI', 'Hawaii', 19233, 5000],
+                    ['US-ID', 'Idaho', 3783, 800],
+                    ['US-IL', 'Illinois', 1895, 1852],
+                    ['US-IN', 'Indiana', 872, 749],
+                    ['US-IA', 'Iowa', 2200, 1000],
+                    ['US-KS', 'Kansas', 1800, 671],
+                    ['US-KY', 'Kentucky', 19818, 915],
+                    ['US-AK', 'Alaska', 3300, 1100],
+                    ['US-LA', 'Louisiana', 2393, 1150],
+                    ['US-ME', 'Maine', 10386, 1300],
+                    ['US-MD', 'Maryland', 1243, 1200],
+                    ['US-MA', 'Massachusetts', 2715, 2656],
+                    ['US-MI', 'Michigan', 13870, 950],
+                    ['US-MN', 'Minnesota', 6578, 1435],
+                    ['US-MS', 'Mississippi', 7789, 880],
+                    ['US-MO', 'Missouri', 7890, 1200],
+                    ['US-MT', 'Montana', 3952, 1000],
+                    ['US-NE', 'Nebraska', 15353, 930],
+                    ['US-NV', 'Nevada', 13869, 1010],
+                    ['US-NH', 'New Hampshire', 1899, 1100],
+                    ['US-NJ', 'New Jersey', 1300, 1200],
+                    ['US-NM', 'New Mexico', 16336, 796],
+                    ['US-NY', 'New York', 36619, 2450],
+                    ['US-NC', 'North Carolina', 1299, 1100],
+                    ['US-ND', 'North Dakota', 1197, 990],
+                    ['US-OH', 'Ohio', 954, 890],
+                    ['US-OK', 'Oklahoma', 3321, 725],
+                    ['US-OR', 'Oregon', 6979, 1395],
+                    ['US-PA', 'Pennsylvania', 1424, 1395],
+                    ['US-RI', 'Rhode Island', 1467, 1200],
+                    ['US-SC', 'South Carolina', 1889, 1440],
+                    ['US-SD', 'South Dakota', 1690, 1100],
+                    ['US-TN', 'Tennessee', 869, 840],
+                    ['US-TX', 'Texas', 1226, 1099],
+                    ['US-UT', 'Utah', 2290, 1095],
+                    ['US-VT', 'Vermont', 24450, 1250],
+                    ['US-VA', 'Virginia', 1599, 1195],
+                    ['US-WA', 'Washington', 1750, 1694],
+                    ['US-WV', 'West Virginia', 2290, 2195],
+                    ['US-WI', 'Wisconsin', 1093, 895],
+                    ['US-WY', 'Wyoming', 7179, 1295],
+                    ['US-DC', 'District of Columbia', 790, 790]
                 ]);
+
                 var options = {
                     region: "US",
                     resolution: 'provinces',
                     colorAxis: {colors: ["#006622", '#bfff00', '#ffbf00']},
                     backgroundColor: "transparent"
                 };
+
                 var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
                 chart.draw(data, options);
             }
 		</script>
@@ -82,16 +88,28 @@
 		<link rel="stylesheet" href="css/main.css" />
 		<noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
 	</head>
-	<body>
+	<body style="overflow:hidden;">
 
 		<!-- Page Wrapper -->
-			<div id="page-wrapper"  style=" background: linear-gradient(90deg, #bba785, #faf2cc)">
+			<div id="page-wrapper"  style=" background: linear-gradient(90deg, #e2ffdb, #faf2cc)">
+                <div style="position: fixed; top: 20px;    width: 100%;">
+                    <ul class="actions">
+                        <li>
+                            <a style="float:left;" href="#first" class="button special color1 circle icon fa-angle-left">Next</a>
+                            <a style="text-decoration: none; float:left;margin-top: 10px;    margin-left: 8px;"  href="#first"><h2 style="margin: 0; color: #464a4c"> To the map</h2></a>
+                        </li>
+                        <li style="    margin-left: 50%;">
+                            <a style="float:right;    margin-left: 8px;"  href="#contacts" class="button special color1 circle icon fa-angle-right">Next</a>
+                            <a style="text-decoration: none; float:right;margin-top: 10px;"  href="#contacts"><h2 style="margin: 0; color: #464a4c;">Contact us </h2></a>
+                        </li>
+                    </ul>
+                </div>
 
 				<!-- Wrapper -->
 					<div id="wrapper">
 
 						<!-- Panel (Banner) -->
-							<section class="panel banner right">
+							<section class="panel banner right" id="main">
 								<div class="content color0 span-3-75">
 									<h1 class="major">Hello, this is<br />
 									State seeker</h1>
@@ -104,7 +122,7 @@
                                     </p>
 									<ul class="actions">
 										<li><a href="#first" class="button special color1 circle icon fa-angle-right">Next</a></li>
-                                        <li><h2>Explore the map</h2></li>
+                                        <li><h2 style="margin: 0">Explore the map</h2></li>
 									</ul>
 								</div>
 								<div class="image filtered span-1-75" data-position="25% 25%">
@@ -120,7 +138,7 @@
 
 						<!-- Panel -->
 							<section class="panel color1">
-								<div class="inner" style="width: 1100px">
+								<div class="inner" style="width: 750px">
                                     <div>
                                         <div class="table-wrapper">
                                             <table class="alt">
@@ -134,67 +152,52 @@
                                                 </thead>
                                                 <tbody>
                                                 <tr>
-                                                    <td><a href="">Alabama</a></td>
-                                                    <td><a href="">Alaska</a></td>
-                                                    <td><a href="">Arkansas</a></td>
-                                                    <td><a href="">Arizona</a></td>
-                                                    <td><a href="">California</a></td>
-                                                    <td><a href="">Colorado</a></td>
-                                                    <td><a href="">Connecticut</a></td>
-                                                    <td><a href="">Columbia</a></td>
-                                                    <td><a href="">Delaware</a></td>
+                                                    <td><a href="#arizona">Arizona</a></td>
+                                                    <td><a href="#california">California</a></td>
+                                                    <td><a href="#colorado">Colorado</a></td>
+                                                    <td><a href="#delaware">Delaware</a></td>
+                                                    <td><a href="#florida">Florida</a></td>
+                                                    <td><a href=""></a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="">District of Columbia</a></td>
-                                                    <td><a href="">Florida</a></td>
-                                                    <td><a href="">Georgia</a></td>
-                                                    <td><a href="">Idaho</a></td>
-                                                    <td><a href="">Illinois</a></td>
-                                                    <td><a href="">Indiana</a></td>
-                                                    <td><a href="">Iowa</a></td>
-                                                    <td><a href="">Kansas</a></td>
-                                                    <td><a href="">Kentucky</a></td>
+                                                    <td><a href="#georgia">Georgia</a></td>
+                                                    <td><a href="#illinois">Illinois</a></td>
+                                                    <td><a href="#indiana">Indiana</a></td>
+                                                    <td><a href="#kansas">Kansas</a></td>
+                                                    <td><a href="#kentucky">Kentucky</a></td>
+                                                    <td><a href=""></a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="">Louisiana</a></td>
-                                                    <td><a href="">Maine</a></td>
-                                                    <td><a href="">Maryland</a></td>
-                                                    <td><a href="">Massachusetts</a></td>
-                                                    <td><a href="">Michigan</a></td>
-                                                    <td><a href="">Minnesota</a></td>
-                                                    <td><a href="">Mississippi</a></td>
-                                                    <td><a href="">Missouri</a></td>
-                                                    <td><a href="">Montana</a></td>
+                                                    <td><a href="#louisiana">Louisiana</a></td>
+                                                    <td><a href="#maine">Maine</a></td>
+                                                    <td><a href="#maryland">Maryland</a></td>
+                                                    <td><a href="#massachusetts">Massachusetts</a></td>
+                                                    <td><a href="#michigan">Michigan</a></td>
+                                                    <td><a href="#minnesota">Minnesota</a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="">Nebraska</a></td>
-                                                    <td><a href="">Nevada</a></td>
-                                                    <td><a href="">New Hampshire</a></td>
-                                                    <td><a href="">New Jersey</a></td>
-                                                    <td><a href="">New Mexico</a></td>
-                                                    <td><a href="">New York</a></td>
-                                                    <td><a href="">North Carolina</a></td>
-                                                    <td><a href="">North Dakota</a></td>
-                                                    <td><a href="">Ohio</a></td>
+                                                    <td><a href="#montana">Montana</a></td>
+                                                    <td><a href="#nebraska">Nebraska</a></td>
+                                                    <td><a href="#nevada">Nevada</a></td>
+                                                    <td><a href="#newmexico">New Mexico</a></td>
+                                                    <td><a href="#newyork">New York</a></td>
+                                                    <td><a href=""></a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="">Oklahoma</a></td>
-                                                    <td><a href="">Oregon</a></td>
-                                                    <td><a href="">Pennsylvania</a></td>
-                                                    <td><a href="">Rhode Island</a></td>
-                                                    <td><a href="">South Carolina</a></td>
-                                                    <td><a href="">South Dakota</a></td>
-                                                    <td><a href="">Tennessee</a></td>
-                                                    <td><a href="">Texas</a></td>
+                                                    <td><a href="#northcarolina">North Carolina</a></td>
+                                                    <td><a href="#ohio">Ohio</a></td>
+                                                    <td><a href="#oklahoma">Oklahoma</a></td>
+                                                    <td><a href="#oregon">Oregon</a></td>
+                                                    <td><a href="#pennsylvania">Pennsylvania</a></td>
+                                                    <td><a href="#tennessee">Tennessee</a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="">Utah</a></td>
-                                                    <td><a href="">Vermont</a></td>
-                                                    <td><a href="">Virginia</a></td>
-                                                    <td><a href="">Washington</a></td>
-                                                    <td><a href="">West Virginia</a></td>
-                                                    <td><a href="">Wisconsin</a></td>
-                                                    <td><a href="">Wyoming</a></td>
+                                                    <td><a href="#texas">Texas</a></td>
+                                                    <td><a href="#vermont">Vermont</a></td>
+                                                    <td><a href="#washington">Washington</a></td>
+                                                    <td><a href="#wisconsin">Wisconsin</a></td>
+                                                    <td><a href="#wyoming">Wyoming</a></td>
+                                                    <td><a href=""></a></td>
                                                     <!--td><a href="">Hawaii</a></td-->
                                                 </tr>
                                                 </tbody>
@@ -203,348 +206,2234 @@
                                     </div>
 								</div>
 							</section>
+                        <section class="panel color2">
 
-						<!-- Panel (Spotlight) -->
-							<section class="panel spotlight large left">
-								<div class="content span-5">
-									<h2 class="major">Magna amet tempus</h2>
-									<p>Mauris a cursus velit. Nunc lacinia sollicitudin egestas bibendum, magna dui bibendum ex, sagittis commodo enim risus sed magna nulla. Vestibulum ut consequat velit. Curabitur vitae libero lorem. Quisque iaculis porttitor blandit. Nullam quis sagittis maximus. Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar.</p>
-								</div>
-								<div class="image filtered tinted" data-position="top right">
-									<img src="images/pic03.jpg" alt="" />
-								</div>
-							</section>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
 
-						<!-- Panel -->
-							<section class="panel">
-								<div class="intro color2">
-									<h2 class="major">Elit integer</h2>
-									<p>Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar. Vivamus sed feugiat finibus. Duis amet bibendum amet sed. Duis mauris ex, dapibus sed ligula tempus volutpat magna etiam.</p>
-								</div>
-								<div class="gallery">
-									<div class="group span-3">
-										<a href="images/gallery/fulls/01.jpg" class="image filtered span-3" data-position="bottom"><img src="images/gallery/thumbs/01.jpg" alt="" /></a>
-										<a href="images/gallery/fulls/02.jpg" class="image filtered span-1-5" data-position="center"><img src="images/gallery/thumbs/02.jpg" alt="" /></a>
-										<a href="images/gallery/fulls/03.jpg" class="image filtered span-1-5" data-position="bottom"><img src="images/gallery/thumbs/03.jpg" alt="" /></a>
-									</div>
-									<a href="images/gallery/fulls/04.jpg" class="image filtered span-2-5" data-position="top"><img src="images/gallery/thumbs/04.jpg" alt="" /></a>
-									<div class="group span-4-5">
-										<a href="images/gallery/fulls/05.jpg" class="image filtered span-3" data-position="top"><img src="images/gallery/thumbs/05.jpg" alt="" /></a>
-										<a href="images/gallery/fulls/06.jpg" class="image filtered span-1-5" data-position="center"><img src="images/gallery/thumbs/06.jpg" alt="" /></a>
-										<a href="images/gallery/fulls/07.jpg" class="image filtered span-1-5" data-position="bottom"><img src="images/gallery/thumbs/07.jpg" alt="" /></a>
-										<a href="images/gallery/fulls/08.jpg" class="image filtered span-3" data-position="top"><img src="images/gallery/thumbs/08.jpg" alt="" /></a>
-									</div>
-									<a href="images/gallery/fulls/09.jpg" class="image filtered span-2-5" data-position="right"><img src="images/gallery/thumbs/09.jpg" alt="" /></a>
-								</div>
-							</section>
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Ohio
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="ohio">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>954.197</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>890</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>47.14</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
 
-						<!-- Panel -->
-							<section class="panel color4-alt">
-								<div class="intro color4">
-									<h2 class="major">Contact</h2>
-									<p>Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar. Vivamus sed feugiat finibus. Duis amet bibendum amet sed. Duis mauris ex, dapibus sed ligula tempus volutpat magna etiam.</p>
-								</div>
-								<div class="inner columns divided">
-									<div class="span-3-25">
-										<form method="post" action="#">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="email" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="4"></textarea>
-											</div>
-											<ul class="actions">
-												<li><input type="submit" value="Send Message" class="button special" /></li>
-											</ul>
-										</form>
-									</div>
-									<div class="span-1-5">
-										<ul class="contact-icons color1">
-											<li class="icon fa-twitter"><a href="#">@untitled-tld</a></li>
-											<li class="icon fa-facebook"><a href="#">facebook.com/untitled</a></li>
-											<li class="icon fa-snapchat-ghost"><a href="#">@untitled-tld</a></li>
-											<li class="icon fa-instagram"><a href="#">@untitled-tld</a></li>
-											<li class="icon fa-medium"><a href="#">medium.com/untitled</a></li>
-										</ul>
-									</div>
-								</div>
-							</section>
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
 
-						<!-- Panel -->
-							<section class="panel color2-alt">
-								<div class="intro color2">
-									<h2 class="major">Elements</h2>
-									<p>Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar. Vivamus sed feugiat finibus. Duis amet bibendum amet sed. Duis mauris ex, dapibus sed ligula tempus volutpat magna etiam. </p>
-								</div>
-								<div class="inner columns aligned">
-									<div class="span-2-75">
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>worthington/Dublin area 0.05%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1803 89.791%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>1971 98.157%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Table -->
+                        <section class="panel color1">
 
-										<h3 class="major">Text</h3>
-										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
 
-										<h1>Heading Level 1</h1>
-										<h2>Heading Level 2</h2>
-										<h3>Heading Level 3</h3>
-										<h4>Heading Level 4</h4>
-										<h5>Heading Level 5</h5>
-										<h6>Heading Level 6</h6>
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Montana
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="montana">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>263</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>31952.273</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>1000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>38.569</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
 
-									</div>
-									<div class="span-3">
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
 
-										<h4>Blockquote</h4>
-										<blockquote>Lorem ipsum dolor sit amet. Felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in vestibulum. Blandit adipiscing eu iaculis volutpat ac adipiscing volutpat ac adipiscing faucibus.</blockquote>
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>shepherd mt 0.463%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>178 82.407%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>211 97.685%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
 
-										<h4>Preformatted</h4>
-										<pre><code>i = 0;
+                        <!-- Table -->
+                        <section class="panel color2">
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + (i++);
-    deck.shuffle();
-}
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Louisiana
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="louisiana">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>2393.528</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>1150</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>44.827</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
 
-									</div>
-									<div class="span-1-25">
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
 
-										<h3 class="major">Lists</h3>
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>uptown/university/oak st 0.097%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1764 85.673%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2050 99.563%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
 
-										<h4>Unordered</h4>
-										<ul>
-											<li>Lorem ipsum dolor sit.</li>
-											<li>Dolor pulvinar etiam.</li>
-											<li>Etiam vel felis viverra.</li>
-										</ul>
+                        <!-- Table -->
+                        <section class="panel color1">
 
-										<h4>Alternate</h4>
-										<ul class="alt">
-											<li>Lorem ipsum dolor sit.</li>
-											<li>Dolor pulvinar etiam.</li>
-											<li>Etiam vel felis viverra.</li>
-											<li>Felis enim feugiat.</li>
-										</ul>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
 
-									</div>
-									<div class="span-1-5">
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Kansas
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="kansas">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>18006.484</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>671</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>44.839</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
 
-										<h4>Ordered</h4>
-										<ol>
-											<li>Lorem ipsum dolor sit.</li>
-											<li>Dolor pulvinar etiam.</li>
-											<li>Etiam vel felis viverra.</li>
-											<li>Felis enim feugiat.</li>
-											<li>Etiam vel felis lorem.</li>
-										</ol>
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
 
-										<h4>Actions</h4>
-										<ul class="actions">
-											<li><a href="#" class="button special color2">Default</a></li>
-											<li><a href="#" class="button">Default</a></li>
-										</ul>
-										<ul class="actions vertical">
-											<li><a href="#" class="button special color2">Default</a></li>
-											<li><a href="#" class="button">Default</a></li>
-										</ul>
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>woodgate 0.092%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1857 85.655%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2159 99.585%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
 
-									</div>
-									<div class="span-1-25">
+                        <!-- Table -->
+                        <section class="panel color2">
 
-										<h4>Icons</h4>
-										<ul class="icons">
-											<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-											<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
-											<li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
-										</ul>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
 
-										<h4>Contact Icons</h4>
-										<ul class="contact-icons color2">
-											<li class="icon fa-twitter"><a href="#">Twitter</a></li>
-											<li class="icon fa-facebook"><a href="#">Facebook</a></li>
-											<li class="icon fa-instagram"><a href="#">Instagram</a></li>
-											<li class="icon fa-github"><a href="#">GitHub</a></li>
-											<li class="icon fa-medium"><a href="#">Medium</a></li>
-										</ul>
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Nebraska
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="nebraska">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>15353.237</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>930</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>46.86</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
 
-									</div>
-									<div class="span-3">
-										<h3 class="major">Table</h3>
-										<h4>Default</h4>
-										<div class="table-wrapper">
-											<table>
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
-									</div>
-									<div class="span-3">
-										<h4>Alternate</h4>
-										<div class="table-wrapper">
-											<table class="alt">
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
-									</div>
-									<div class="span-2-25">
-										<h3 class="major">Buttons</h3>
-										<ul class="actions">
-											<li><a href="#" class="button special color2">Special</a></li>
-											<li><a href="#" class="button">Default</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button large">Large</a></li>
-											<li><a href="#" class="button small">Small</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button special color2 icon fa-cog">Icon</a></li>
-											<li><a href="#" class="button icon fa-diamond">Icon</a></li>
-										</ul>
-										<ul class="actions">
-											<li><span class="button special color2 disabled">Disabled</span></li>
-											<li><span class="button disabled">Disabled</span></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button special color2 circle icon fa-cog">Icon</a></li>
-											<li><a href="#" class="button circle icon fa-diamond">Icon</a></li>
-										</ul>
-									</div>
-									<div class="span-4-5">
-										<h3 class="major">Form</h3>
-										<form method="post" action="#">
-											<div class="field third">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field third">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field third">
-												<label for="demo-category">Category</label>
-												<div class="select-wrapper">
-													<select name="demo-category" id="demo-category">
-														<option value="">-</option>
-														<option value="1">Manufacturing</option>
-														<option value="1">Shipping</option>
-														<option value="1">Administration</option>
-														<option value="1">Human Resources</option>
-													</select>
-												</div>
-											</div>
-											<div class="field quarter">
-												<input type="radio" id="demo-priority-low" name="demo-priority" class="color2" checked />
-												<label for="demo-priority-low">Low Priority</label>
-											</div>
-											<div class="field quarter">
-												<input type="radio" id="demo-priority-high" name="demo-priority" class="color2" />
-												<label for="demo-priority-high">High Priority</label>
-											</div>
-											<div class="field quarter">
-												<input type="checkbox" id="demo-copy" name="demo-copy" class="color2" />
-												<label for="demo-copy">Email a copy</label>
-											</div>
-											<div class="field quarter">
-												<input type="checkbox" id="demo-human" name="demo-human" class="color2" checked />
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="2"></textarea>
-											</div>
-											<ul class="actions">
-												<li><input type="submit" value="Send Message" class="special color2" /></li>
-												<li><input type="reset" value="Reset" /></li>
-											</ul>
-										</form>
-									</div>
-								</div>
-							</section>
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>west omaha 0.045%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>2084 93.579%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2219 99.641%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color1">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Maine
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="maine">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>10386.039</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>1300</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>42.51</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>secret</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1675 83.876%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>1964 98.348%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color2">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Vermont
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="vermont">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>24450.909</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>1250</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>40.159</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>williston village 0.05%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1606 79.742%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>1971 97.865%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color1">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Kentucky
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="kentucky">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>19818.395</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>915</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>45.977</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>secret</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1941 90.028%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2138 99.165%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color2">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Texas
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="texas">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>12000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>1226.667</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>1099</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>49.82</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>secret</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>9181 91.718%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>9977 99.67%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color1">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Wyoming
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="wyoming">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>71791.181</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>1295</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>40.408</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>wheatland 0.045%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1987 90.4%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2174 98.908%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color2">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                New Mexico
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="newmexico">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>16336.282</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>796</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>43.971</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>unm north 0.048%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1876 89.248%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2085 99.191%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color1">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Massachusetts
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="massachusetts">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>2715.313</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>2656</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>57.732</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>westborough 0.085%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>2237 95.273%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2334 99.404%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color2">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Indiana
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="indiana">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>872.654</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>749</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>44.926</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>secret</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1761 82.521%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2118 99.25%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color1">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Pennsylvania
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="pennsylvania">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>1424.803</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>1395</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>50.003</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>secret</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1664 73.956%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2237 99.422%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color2">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Florida
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="florida">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>1004.157</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>890</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>48.009</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>secret</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1793 86.744%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2051 99.226%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color1">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Georgia
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="georgia">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>1599.136</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>1080</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>47.563</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>stone mtn 0.05%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1652 83.099%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>1953 98.239%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color2">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Arizona
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="arizona">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>169050.657</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>190000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>55.127</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>west Glendale Arizona 0.047%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>2021 94.175%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2139 99.674%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color1">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Tennessee
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="tennessee">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>869.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>840</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>43.341</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>secret</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1781 87.005%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2031 99.218%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color2">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Minnesota
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="minnesota">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>6578.663</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>1435</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>49.199</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>woodbury 0.049%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1819 88.258%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2002 97.137%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color1">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Wisconsin
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="wisconsin">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>1093.312</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>895</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>45.99</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>whitefish bay 0.143%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1736 82.745%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2075 98.904%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color2">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                North Carolina
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="northcarolina">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>1299.296</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>1100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>49.634</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>we provide cpn very low rate 0.048%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1906 91.944%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2052 98.987%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color1">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Washington
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="washington">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>1750.563</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>1694</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>51.03</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>winlock / Toledo 0.045%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>2069 93.366%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2185 98.601%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color2">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                New York
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="newyork">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>46619.816</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>2450</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>54.891</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>secret</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1652 86.719%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>1853 97.27%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color1">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Maryland
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="maryland">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>1243.369</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>1200</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>48.151</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>windsor mills 0.048%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1802 86.344%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2058 98.61%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color2">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Delaware
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="delaware">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>8916.663</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>1104</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>47.312</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>secret</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1630 77.767%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2070 98.76%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color1">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                California
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="california">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>4800</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>4302.262</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>1775</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>47.897</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>woodland hills 0.099%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>3548 88.149%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>3948 98.087%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color2">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Oregon
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="oregon">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>6979.97</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>1395</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>50.76</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>yamhill 0.049%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1898 93.268%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>1995 98.034%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color1">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Michigan
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="michigan">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>13870.43</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>950</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>42.924</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>secret</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1662 81.591%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>1977 97.054%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color2">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Nevada
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="nevada">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>13869.508</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>1010</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>46.353</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>secret</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1759 84.935%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2053 99.131%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color1">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Oklahoma
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="oklahoma">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>3321.756</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>725</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>45.532</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>secret</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1841 85.113%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2153 99.538%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color2">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Colorado
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="colorado">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>5028.059</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>1520</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>53.679</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>~~~~~ Cap Hill~LODO~Golden Triangle ~~~~ 0.045%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>2093 94.407%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2193 98.917%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="panel color1">
+
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+                                                Illinois
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody  id="illinois">
+                                        <tr>
+                                            <td>number of apartment advertisments</td>
+                                            <td>2400</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average price</td>
+                                            <td>1895.959</td>
+                                        </tr>
+                                        <tr>
+                                            <td>middle price</td>
+                                            <td>1852</td>
+                                        </tr>
+                                        <tr>
+                                            <td>average length of advertisment</td>
+                                            <td>52.674</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="inner" style="width: 500px">
+                                <div class="table-wrapper">
+
+                                    <table class="alt">
+                                        <thead>
+                                        <tr>
+                                            <h3>
+
+                                                <span href="" class="fa fa-angle-right" style="margin-left: 10px"></span>
+                                            </h3>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>the most popular place</td>
+                                            <td>secret</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number geotagged</td>
+                                            <td>0 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a picture</td>
+                                            <td>1861 82.272%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>number of elements, which have a map</td>
+                                            <td>2249 99.425%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+
+
+                        <!-- Contacts -->
+                        <section class="panel color4-alt">
+                            <div class="intro color4">
+                                <h2 class="major">Contact us</h2>
+                            </div>
+                            <div class="inner columns divided">
+
+                                <div class="span-1-5">
+                                    <ul class="contact-icons color1">
+                                        <li class="icon fa-github"><a href="https://github.com/kateinua/term_project">GitHub Project</a></li>
+                                        <li class="icon fa-facebook"><a href="https://www.facebook.com/kateinua">Kate Makarova</a></li>
+                                        <li class="icon fa-facebook"><a href="https://www.facebook.com/ira.zakharchenko.1">Ira Zakharchenko</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
 
 						<!-- Copyright -->
-							<div class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
+							<div class="copyright" id="contacts">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
 					</div>
 
 			</div>

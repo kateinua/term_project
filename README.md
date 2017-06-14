@@ -23,4 +23,5 @@ o	Число оголошень, які відмічені на карті
 2.	Запускаєтесь модуль start_read_file.py, який записує отриману інформацію в текстовий документ result.txt
 
 
-Відео презентацію даного проекту можна переглянути за посиланням: https://drive.google.com/a/ucu.edu.ua/file/d/0B5vm0S4zb3QmOEh4NUluY2pmOUU/view?usp=sharing
+Відео презентацію даного проекту можна переглянути за посиланням: 
+https://www.youtube.com/watch?v=LhqY7yGUs44
